@@ -54,10 +54,10 @@ public class PseudoPalindromicPaths {
         }else {
             res = dfs(node.left, counts) + dfs(node.right, counts);
         }
-
+        counts[node.val]--;
         return res;
     }
-
+    
     public static boolean isPseudoPalindrome(int[] counts) {
         int res = 0;
 
